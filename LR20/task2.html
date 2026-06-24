@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сумма</title>
+</head>
+<body>
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <button id="btn">Сложить</button>
+    <p id="out"></p>
+
+    <script>
+        btn.onclick = function() {
+            let sum = Number(a.value) + Number(b.value);
+            out.innerHTML = 'Сумма = ' + sum;
+        };
+    </script>
+</body>
+</html>

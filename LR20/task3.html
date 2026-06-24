@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div div { width: 80px; height: 80px; border-radius: 50%; background: gray; margin: 10px; }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+    <button id="redBtn">Красный</button>
+    <button id="yellowBtn">Жёлтый</button>
+    <button id="greenBtn">Зелёный</button>
+
+    <script>
+        function reset() {
+            red.style.background = 'gray';
+            yellow.style.background = 'gray';
+            green.style.background = 'gray';
+        }
+        redBtn.onclick = () => { reset(); red.style.background = 'red'; };
+        yellowBtn.onclick = () => { reset(); yellow.style.background = 'yellow'; };
+        greenBtn.onclick = () => { reset(); green.style.background = 'green'; };
+    </script>
+</body>
+</html>

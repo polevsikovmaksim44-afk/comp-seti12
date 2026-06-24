@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример 3</title>
+</head>
+<body>
+    <p>Это текст</p>
+    <button>Кликни</button>
+
+    <script>
+        let p = document.querySelector('p');
+        let btn = document.querySelector('button');
+        
+        btn.onclick = function() {
+            p.innerHTML = 'Клик сработал!';
+            p.style.color = 'blue';
+        };
+    </script>
+</body>
+</html>
