@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Формы - Пример 7</title>
+</head>
+<body>
+    <form name="formal">
+        <p>Какой язык вы хотите изучать:</p>
+        <select name="language" size="1">
+            <option selected value="html">html</option>
+            <option value="php">php</option>
+            <option value="java">java</option>
+        </select>
+
+        <p>Какое время вы готовы на это потратить:</p>
+        <select name="time" size="3">
+            <option selected value="1">1 месяц</option>
+            <option value="2">2 месяца</option>
+            <option value="3">3 месяца</option>
+        </select>
+
+        <p>Какие дни недели для занятий вас устроят:<br>
+        (выбирайте с нажатой клавишей Ctrl)</p>
+        <select name="day" size="7" multiple>
+            <option selected value="mon">понедельник</option>
+            <option value="tue">вторник</option>
+            <option value="wed">среда</option>
+            <option selected value="thu">четверг</option>
+            <option value="fri">пятница</option>
+            <option value="sat">суббота</option>
+            <option value="sun">воскресенье</option>
+        </select>
+    </form>
+</body>
+</html>

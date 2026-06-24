@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Форма регистрации</title>
+</head>
+<body>
+    <h1>Форма регистрации</h1>
+    <form>
+        <p><strong>Имя:</strong><br>
+        <input type="text" name="name" size="30" required></p>
+
+        <p><strong>E-mail:</strong><br>
+        <input type="email" name="email" size="30" required></p>
+
+        <p><strong>Пароль:</strong><br>
+        <input type="password" name="password" size="30" required></p>
+
+        <p><strong>Повтор пароля:</strong><br>
+        <input type="password" name="password2" size="30" required></p>
+
+        <p><strong>Пол:</strong><br>
+        <input type="radio" name="gender" value="male" checked> мужской
+        <input type="radio" name="gender" value="female"> женский</p>
+
+        <p><strong>Увлечения:</strong><br>
+        <input type="checkbox" name="hobby" value="computer"> компьютерный
+        <input type="checkbox" name="hobby" value="sport"> спорт
+        <input type="checkbox" name="hobby" value="games"> игры
+        <input type="checkbox" name="hobby" value="animals"> животные
+        <input type="checkbox" name="hobby" value="cars"> автомобили
+        <input type="checkbox" name="hobby" value="clubs"> клубы
+        <input type="checkbox" name="hobby" value="music"> музыка
+        </p>
+
+        <p><strong>Ваши пожелания:</strong><br>
+        <textarea name="wishes" rows="4" cols="40"></textarea></p>
+
+        <p>
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+        </p>
+    </form>
+</body>
+</html>
