@@ -1,0 +1,8 @@
+body {
+    font-family: "Times New Roman", serif;
+}
+.first-letter::first-letter {
+    font-family: Arial, sans-serif;
+    color: red;
+    font-size: 36px;
+}
