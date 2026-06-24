@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2</title>
+</head>
+<body>
+    <input type="number" id="price" placeholder="Цена товара">
+    <input type="number" id="age" placeholder="Возраст">
+    <button id="btn">Рассчитать</button>
+    <p id="res"></p>
+
+    <script>
+        let priceInput = document.querySelector("#price");
+        let ageInput = document.querySelector("#age");
+        let btn = document.querySelector("#btn");
+        let res = document.querySelector("#res");
+
+        function getPrice(price, age) {
+            let discount = 0;
+            
+            if (age < 18) {
+                discount = 10;
+            } else if (age >= 60) {
+                discount = 20;
+            }
+            
+            return price - (price * discount / 100);
+        }
+
+        btn.onclick = function() {
+            let p = priceInput.value;
+            let a = ageInput.value;
+
+            if (p === "" || a === "") {
+                res.textContent = "Заполните все поля!";
+                res.style.color = "red";
+            } else {
+                let finalPrice = getPrice(Number(p), Number(a));
+                res.textContent = "Итоговая цена: " + finalPrice + " рублей";
+                res.style.color = "green";
+            }
+        };
+    </script>
+</body>
+</html>

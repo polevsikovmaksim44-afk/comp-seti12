@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+</head>
+<body>
+    <input type="text" id="phone" placeholder="Номер телефона">
+    <button id="btn">Проверить номер</button>
+    <p id="res"></p>
+
+    <script>
+        let input = document.querySelector("#phone");
+        let btn = document.querySelector("#btn");
+        let res = document.querySelector("#res");
+
+        btn.onclick = function() {
+            let num = input.value;
+
+           
+            if (num === "") {
+                res.textContent = "Номер не пустой";
+                res.style.color = "red";
+                return;
+            }
+
+            let clean = num;
+            if (clean[0] === "+") {
+                clean = clean.slice(1);
+            }
+
+    
+            for (let i = 0; i < clean.length; i++) {
+                if (clean[i] < "0" || clean[i] > "9") {
+                    res.textContent = "Номер содержит не только цифры";
+                    res.style.color = "red";
+                    return;
+                }
+            }
+
+            if (num[0] === "+" && num[1] === "7" && num.length === 12) {
+                res.textContent = "Номер телефона верный";
+                res.style.color = "green";
+            } else if (num[0] === "8" && num.length === 11) {
+                res.textContent = "Номер телефона верный";
+                res.style.color = "green";
+            } else if (num[0] !== "+" && num[0] !== "8" && num.length === 10) {
+                res.textContent = "Номер телефона верный";
+                res.style.color = "green";
+            } else {
+                res.textContent = "Неверная длина или формат номера";
+                res.style.color = "red";
+            }
+        };
+    </script>
+</body>
+</html>

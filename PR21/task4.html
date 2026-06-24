@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 4</title>
+</head>
+<body>
+    <h2> Калькулятор чаевых</h2>
+    
+    <input type="number" id="bill" placeholder="Сумма счёта">
+    <input type="number" id="tip" placeholder="Процент чаевых (0-50)">
+    <input type="number" id="people" placeholder="Количество человек" value="1">
+    <button id="btn">Рассчитать</button>
+
+    <p id="res"></p>
+
+    <script>
+        let billInput = document.querySelector("#bill");
+        let tipInput = document.querySelector("#tip");
+        let peopleInput = document.querySelector("#people");
+        let btn = document.querySelector("#btn");
+        let res = document.querySelector("#res");
+
+        btn.onclick = function() {
+            let bill = Number(billInput.value);
+            let tip = Number(tipInput.value);
+            let people = Number(peopleInput.value);
+
+           
+            if (billInput.value === "" || tipInput.value === "" || peopleInput.value === "") {
+                res.textContent = "Заполните все поля!";
+                res.style.color = "red";
+                return;
+            }
+            if (bill < 0 || tip < 0 || tip > 50 || people < 1) {
+                res.textContent = "Неверные данные в полях!";
+                res.style.color = "red";
+                return;
+            }
+
+            
+            let tipSum = bill * (tip / 100);
+            let total = bill + tipSum;
+            let perPerson = total / people;
+
+            
+            res.style.color = "black";
+            res.innerHTML = "Сумма чаевых: " + tipSum + " руб.<br>" +
+                            "Общая сумма: " + total + " руб.<br>" +
+                            "На каждого человека: " + perPerson.toFixed(2) + " руб.";
+        };
+    </script>
+</body>
+</html>
